@@ -176,6 +176,104 @@ Cobrança por destaque de quadras no mapa do app
 
 Ex: “Quadra Arena do Sol” paga R$ 49/mês para ser exibida como destaque 
 
+---------------------------------------------------------------------------------------
+
+Atores do sistema 
+
+ 
+
+Jogador – cadastra-se, cria ou entra em um time 
+
+ 
+
+Time – Entidade que reúne dois ou mais jogadores  
+
+ 
+
+Sistema- Gerencia dados, rankings, partidas e notificações 
+---------------------------------------------------------------------------------------
+
+Requisitos Funcionais: 
+
+ 
+
+O sistema deve permitir o cadastro e login de usuários. 
+
+ 
+
+O usuário deve poder criar ou entrar em um time 
+
+ 
+
+O sistema deve permitir o agendamento de partidas com data, hora e local. 
+
+ 
+
+O sistema deve permitir o agendamento de partidas com data, hora e local 
+
+ 
+
+O sistema deve permitir convidar outros jogadores para uma partida 
+
+ 
+
+O sistema deve permitir a confirmação ou recusa de participação nos jogos 
+
+ 
+
+O sistema deve registrar o placar e resultado da partida 
+
+ 
+
+O sistema deve exibir partidas futuras agendadas  
+
+ 
+
+O sistema deve realizar o chaveamento dos times 
+
+ 
+
+O sistema deve permitir editar o perfil do usuário 
+
+ ---------------------------------------------------------------------------------------
+
+Declaração de requisitos não funcionais 
+ 
+
+O sistema deve ser desenvolvido com arquitetura mobile (Native React). 
+
+
+O sistema deve armazenar os dados em nuvem. 
+
+
+O sistema deve possuir uma interface responsiva e intuitiva. 
+
+
+O sistema deve garantir a integridade dos dados de login e partidas. 
+
+
+O sistema deve funcionar em dispositivos Android e IOS. 
+
+
+O tempo de resposta da aplicação deve ser inferior a 2 segundos por ação. 
+
+
+
+O Sistema deve permitir múltiplos acessos simultâneos. 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+  
+
+
  
 
   

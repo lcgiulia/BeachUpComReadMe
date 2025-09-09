@@ -261,7 +261,12 @@ O tempo de resposta da aplicação deve ser inferior a 2 segundos por ação.
 
 O Sistema deve permitir múltiplos acessos simultâneos. 
 
- 
+
+ ----------------------------------------------------------------------------------------------
+
+ O PO será:  Malu Dias 
+
+ O Scrum Master será: João Matheus
 
  
 

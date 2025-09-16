@@ -24,7 +24,6 @@ Público jovem e adulto, entre 18 e 45 anos.
 
 Principais funcionalidades 
 
-
 Cadastro de usuários e times 
 
 Agendamento de partidas com data, hora e local. 
@@ -268,7 +267,11 @@ O Sistema deve permitir múltiplos acessos simultâneos.
 
  O Scrum Master será: João Matheus
 
- 
+ ----------------------------------------------------------------------------------------------
+
+ Link planilha WSJF
+
+ https://docs.google.com/spreadsheets/d/1XGuOdwQ80OQfQs9tlsGxjdK5ECw1cvFV7ebg78lXa_E/edit?usp=sharing
 
  
 

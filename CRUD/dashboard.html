@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - BeachTenis</title>
+  <meta name="description" content="Seu painel principal no BeachTenis - gerencie suas atividades, times e campeonatos.">
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/lucide/0.462.0/lucide.min.css" rel="stylesheet">
+</head>
+<body class="dashboard-body">
+  <!-- Header -->
+  <header class="header">
+    <nav class="nav">
+      <div class="nav-brand">
+        <div class="brand-icon">🏐</div>
+        <span class="brand-text">BeachTenis</span>
+      </div>
+      
+      <div class="nav-menu" id="navMenu">
+        <a href="#" class="nav-link">Dashboard</a>
+        <a href="#" class="nav-link">Meus Times</a>
+        <a href="#" class="nav-link">Reservas</a>
+        <div class="user-menu">
+          <span class="user-name" id="userName">João Silva</span>
+          <button class="btn btn-outline" id="logoutBtn">Sair</button>
+        </div>
+      </div>
+      
+      <button class="mobile-menu-btn" id="mobileMenuBtn">
+        <span class="hamburger"></span>
+      </button>
+    </nav>
+  </header>
+
+  <main class="dashboard-main">
+    <!-- Welcome Section -->
+    <section class="welcome-section">
+      <div class="container">
+        <div class="welcome-content">
+          <h1 class="welcome-title">
+            Bem-vindo de volta, <span class="gradient-text" id="welcomeUser">João</span>! 🏐
+          </h1>
+          <p class="welcome-subtitle">Pronto para dominar as quadras hoje? Vamos começar!</p>
+        </div>
+        
+        <div class="quick-stats">
+          <div class="stat-card">
+            <div class="stat-icon">🏆</div>
+            <div class="stat-info">
+              <div class="stat-number">12</div>
+              <div class="stat-label">Partidas Jogadas</div>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon">👥</div>
+            <div class="stat-info">
+              <div class="stat-number">3</div>
+              <div class="stat-label">Times Ativos</div>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon">🥇</div>
+            <div class="stat-info">
+              <div class="stat-number">85%</div>
+              <div class="stat-label">Taxa de Vitórias</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Actions -->
+    <section class="actions-section">
+      <div class="container">
+        <h2 class="section-title">O que você quer fazer hoje?</h2>
+        <div class="actions-grid">
+
+            <!-- Meus Times -->
+<section class="my-teams-section">
+  <div class="container">
+    <h2 class="section-title">Meus Times</h2>
+    <div id="myTeams" class="my-teams-grid">
+      <!-- Os times cadastrados pelo usuário serão carregados aqui via JS -->
+    </div>
+  </div>
+</section>
+
+          <!-- Montar Time -->
+          <div class="action-card" id="createTeamCard">
+            <div class="action-header">
+              <div class="action-icon">👥</div>
+              <h3 class="action-title">Montar um Time</h3>
+            </div>
+            <p class="action-description">Crie seu próprio time, convide amigos e organize partidas incríveis.</p>
+            <div class="action-features">
+              <span class="feature-item">• Convite por link</span>
+              <span class="feature-item">• Chat do time</span>
+              <span class="feature-item">• Agenda compartilhada</span>
+            </div>
+            <button class="btn btn-hero btn-full action-btn">
+              <span class="btn-icon">➕</span>
+              Criar Time
+            </button>
+          </div>
+
+          <!-- Entrar em Time -->
+          <div class="action-card" id="joinTeamCard">
+            <div class="action-header">
+              <div class="action-icon">🤝</div>
+              <h3 class="action-title">Entrar em um Time</h3>
+            </div>
+            <p class="action-description">Encontre times na sua região ou use um código de convite para participar.</p>
+            <div class="action-features">
+              <span class="feature-item">• Busca por localização</span>
+              <span class="feature-item">• Filtros por nível</span>
+              <span class="feature-item">• Avaliações dos times</span>
+            </div>
+            <button class="btn btn-outline btn-full action-btn">
+              <span class="btn-icon">🔍</span>
+              Procurar Times
+            </button>
+          </div>
+
+          <!-- Participar de Campeonatos -->
+          <div class="action-card" id="joinTournamentCard">
+            <div class="action-header">
+              <div class="action-icon">🏆</div>
+              <h3 class="action-title">Participar de Campeonatos</h3>
+            </div>
+            <p class="action-description">Inscreva-se nos melhores torneios e teste suas habilidades contra outros jogadores.</p>
+            <div class="action-features">
+              <span class="feature-item">• Torneios por categoria</span>
+              <span class="feature-item">• Premiações incríveis</span>
+              <span class="feature-item">• Ranking nacional</span>
+            </div>
+            <button class="btn btn-hero btn-full action-btn">
+              <span class="btn-icon">🎯</span>
+              Ver Campeonatos
+            </button>
+          </div>
+
+          <!-- Agendar Quadras -->
+          <div class="action-card" id="bookCourtCard">
+            <div class="action-header">
+              <div class="action-icon">📅</div>
+              <h3 class="action-title">Agendar Quadras</h3>
+            </div>
+            <p class="action-description">Reserve as melhores quadras da sua cidade com facilidade e rapidez.</p>
+            <div class="action-features">
+              <span class="feature-item">• Reserva instantânea</span>
+              <span class="feature-item">• Quadras verificadas</span>
+              <span class="feature-item">• Preços transparentes</span>
+            </div>
+            <button class="btn btn-outline btn-full action-btn">
+              <span class="btn-icon">🏟️</span>
+              Reservar Quadra
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Recent Activity -->
+    <section class="activity-section">
+      <div class="container">
+        <h2 class="section-title">Atividades Recentes</h2>
+        <div class="activity-list">
+          <div class="activity-item">
+            <div class="activity-icon">🎾</div>
+            <div class="activity-content">
+              <h4 class="activity-title">Partida finalizada</h4>
+              <p class="activity-description">Vitória 6-4, 6-2 contra o time Thunder Beach</p>
+              <span class="activity-time">Há 2 horas</span>
+            </div>
+          </div>
+          <div class="activity-item">
+            <div class="activity-icon">👥</div>
+            <div class="activity-content">
+              <h4 class="activity-title">Novo membro no time</h4>
+              <p class="activity-description">Maria Santos se juntou ao time Ace Masters</p>
+              <span class="activity-time">Ontem</span>
+            </div>
+          </div>
+          <div class="activity-item">
+            <div class="activity-icon">🏆</div>
+            <div class="activity-content">
+              <h4 class="activity-title">Inscrição confirmada</h4>
+              <p class="activity-description">Copa Verão Beach Tennis - Categoria Intermediário</p>
+              <span class="activity-time">Há 3 dias</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Upcoming Events -->
+    <section class="events-section">
+      <div class="container">
+        <h2 class="section-title">Próximos Eventos</h2>
+        <div class="events-grid">
+          <div class="event-card">
+            <div class="event-date">
+              <span class="event-day">15</span>
+              <span class="event-month">Jan</span>
+            </div>
+            <div class="event-content">
+              <h4 class="event-title">Treino do Time</h4>
+              <p class="event-details">Arena Beach Copacabana • 18:00</p>
+            </div>
+            <button class="btn btn-outline event-btn">Ver</button>
+          </div>
+          <div class="event-card">
+            <div class="event-date">
+              <span class="event-day">18</span>
+              <span class="event-month">Jan</span>
+            </div>
+            <div class="event-content">
+              <h4 class="event-title">Campeonato Regional</h4>
+              <p class="event-details">Beach Club Barra • 08:00</p>
+            </div>
+            <button class="btn btn-hero event-btn">Ir</button>
+          </div>
+          <div class="event-card">
+            <div class="event-date">
+              <span class="event-day">22</span>
+              <span class="event-month">Jan</span>
+            </div>
+            <div class="event-content">
+              <h4 class="event-title">Quadra Reservada</h4>
+              <p class="event-details">Ipanema Beach Sports • 16:00</p>
+            </div>
+            <button class="btn btn-outline event-btn">Ver</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

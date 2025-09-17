@@ -1,0 +1,253 @@
+/* ============================
+   Dashboard Geral
+============================ */
+.dashboard-body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 95%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header */
+.header {
+    background: #1e3a8a;
+    color: white;
+    padding: 15px 0;
+}
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+.nav-menu a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}
+.nav-menu .user-menu {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.btn {
+    cursor: pointer;
+    padding: 7px 15px;
+    border-radius: 5px;
+    border: none;
+}
+.btn-hero {
+    background: #1e3a8a;
+    color: white;
+}
+.btn-outline {
+    background: transparent;
+    border: 2px solid #1e3a8a;
+    color: #1e3a8a;
+}
+.btn-full {
+    width: 100%;
+}
+
+/* Cards */
+.stat-card, .action-card, .team-item {
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    margin-bottom: 15px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.stat-card:hover, .action-card:hover, .team-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Titles */
+.section-title {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+/* Modal */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 1000;
+}
+.modal.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+.modal-content {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    width: 90%;
+    max-width: 500px;
+    max-height: 90%;
+    overflow-y: auto;
+    position: relative;
+}
+.modal-close {
+    background: transparent;
+    border: none;
+    font-size: 1.3rem;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    cursor: pointer;
+}
+
+/* Form */
+.form-group {
+    margin-bottom: 15px;
+}
+.form-input {
+    width: 100%;
+    padding: 8px 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* Meus Times */
+#myTeams {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    margin-top: 15px;
+}
+.team-item {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.team-item .actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+/* ============================
+   GERAL DO DASHBOARD
+============================ */
+.dashboard-body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f4f4f8;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+.section-title {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+/* ============================
+   AÇÕES / CARDS
+============================ */
+.actions-grid, .my-teams-grid, .events-grid, .activity-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.actions-grid, .events-grid {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.action-card, .team-item, .event-card, .activity-item {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.action-card:hover, .team-item:hover, .event-card:hover, .activity-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* ============================
+   BOTÕES
+============================ */
+.btn {
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  padding: 0.6rem 1.2rem;
+  font-weight: 600;
+  transition: background 0.2s ease;
+}
+
+.btn-hero {
+  background: #ff7a18;
+  color: #fff;
+}
+
+.btn-hero:hover {
+  background: #ff5e00;
+}
+
+.btn-outline {
+  background: transparent;
+  border: 2px solid #ff7a18;
+  color: #ff7a18;
+}
+
+.btn-outline:hover {
+  background: #ff7a18;
+  color: #fff;
+}
+
+/* ============================
+   MEUS TIMES
+============================ */
+.my-teams-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.team-item h4 {
+  margin: 0 0 0.5rem;
+  font-size: 1.2rem;
+}
+
+.team-item p {
+  font-size: 0.95rem;
+  margin: 0.2rem 0 0.6rem;
+}
+
+.team-item .actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.team-item .btn {
+  flex: 1;
+  margin: 0 0.2rem;
+}

@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BeachTenis - Sua plataforma completa</title>
+    <meta name="description" content="A plataforma completa para os amantes do beach tennis. Conecte-se, jogue e evolua no esporte que você ama.">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lucide/0.462.0/lucide.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-brand">
+                <div class="brand-icon">🏐</div>
+                <span class="brand-text">BeachTenis</span>
+            </div>
+            
+            <div class="nav-menu" id="navMenu">
+                <a href="#quadras" class="nav-link">Quadras</a>
+                <a href="#campeonatos" class="nav-link">Campeonatos</a>
+                <a href="#reservas" class="nav-link">Reservas</a>
+                <button class="btn btn-outline" id="loginBtn">Entrar</button>
+                <button class="btn btn-hero" id="registerBtn">Cadastrar</button>
+            </div>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <span class="hamburger"></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">
+                Sua Paixão pelo <span class="gradient-text">Beach Tennis</span> Começa Aqui
+            </h1>
+            <p class="hero-subtitle">
+                Encontre as melhores quadras, participe de campeonatos emocionantes e conecte-se com outros apaixonados pelo esporte.
+            </p>
+            <div class="hero-buttons">
+                <button class="btn btn-hero btn-lg" id="heroRegisterBtn">
+                    <span class="btn-icon">🏐</span>
+                    Começar Agora
+                </button>
+                <button class="btn btn-glass btn-lg" id="heroCourtsBtn">
+                    <span class="btn-icon">📍</span>
+                    Encontrar Quadras
+                </button>
+            </div>
+        </div>
+        <div class="hero-stats">
+            <div class="stat-item">
+                <div class="stat-number">150+</div>
+                <div class="stat-label">Quadras Parceiras</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">5000+</div>
+                <div class="stat-label">Jogadores Ativos</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">200+</div>
+                <div class="stat-label">Campeonatos/Ano</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courts Section -->
+    <section id="quadras" class="courts-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="gradient-text">Quadras</span> em Destaque
+                </h2>
+                <p class="section-subtitle">
+                    Descubra as melhores quadras da sua região com facilidade.
+                </p>
+            </div>
+            
+            <div class="courts-grid" id="courtsGrid">
+                <!-- Courts will be populated by JavaScript -->
+            </div>
+            
+            <div class="section-cta">
+                <button class="btn btn-outline btn-lg">
+                    <span class="btn-icon">🗺️</span>
+                    Ver Todas as Quadras
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tournaments Section -->
+    <section id="campeonatos" class="tournaments-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="gradient-text">Campeonatos</span> em Destaque
+                </h2>
+                <p class="section-subtitle">
+                    Participe dos melhores torneios e mostre suas habilidades no beach tennis.
+                </p>
+            </div>
+            
+            <div class="tournaments-grid" id="tournamentsGrid">
+                <!-- Tournaments will be populated by JavaScript -->
+            </div>
+            
+            <div class="section-cta">
+                <button class="btn btn-outline btn-lg">
+                    <span class="btn-icon">🏆</span>
+                    Ver Todos os Campeonatos
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section id="reservas" class="booking-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    Reserve Sua <span class="gradient-text">Quadra</span>
+                </h2>
+                <p class="section-subtitle">
+                    Agende facilmente sua partida nos melhores locais da cidade.
+                </p>
+            </div>
+            
+            <div class="booking-container">
+                <div class="booking-form">
+                    <h3 class="form-title">Detalhes da Reserva</h3>
+                    
+                    <div class="form-group">
+                        <label class="form-label">
+                            <span class="label-icon">📍</span>
+                            Escolha a Quadra
+                        </label>
+                        <div class="court-options" id="courtOptions">
+                            <!-- Court options will be populated by JavaScript -->
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">
+                            <span class="label-icon">📅</span>
+                            Data da Partida
+                        </label>
+                        <input type="date" class="form-input" id="bookingDate" min="">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">
+                            <span class="label-icon">⏰</span>
+                            Horário
+                        </label>
+                        <div class="time-grid" id="timeGrid">
+                            <!-- Time slots will be populated by JavaScript -->
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="booking-summary">
+                    <h4 class="summary-title">Resumo da Reserva</h4>
+                    
+                    <div class="summary-details" id="summaryDetails">
+                        <div class="summary-item">
+                            <span>Quadra:</span>
+                            <span id="selectedCourtName">Selecione</span>
+                        </div>
+                        <div class="summary-item">
+                            <span>Data:</span>
+                            <span id="selectedDate">Selecione</span>
+                        </div>
+                        <div class="summary-item">
+                            <span>Horário:</span>
+                            <span id="selectedTime">Selecione</span>
+                        </div>
+                        <div class="summary-item">
+                            <span>Duração:</span>
+                            <span>1 hora</span>
+                        </div>
+                    </div>
+                    
+                    <div class="summary-total">
+                        <div class="total-item">
+                            <span class="total-label">Total:</span>
+                            <span class="total-price" id="totalPrice">R$ 0</span>
+                        </div>
+                    </div>
+                    
+                    <div class="booking-actions">
+                        <button class="btn btn-hero btn-full" id="finalizeBooking" disabled>
+                            <span class="btn-icon">💳</span>
+                            Finalizar Reserva
+                        </button>
+                        <button class="btn btn-outline btn-full">
+                            <span class="btn-icon">👥</span>
+                            Convidar Amigos
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <!-- Brand -->
+                <div class="footer-brand">
+                    <div class="brand">
+                        <div class="brand-icon">🏐</div>
+                        <span class="brand-text">BeachTenis</span>
+                    </div>
+                    <p class="brand-description">
+                        A plataforma completa para os amantes do beach tennis. 
+                        Conecte-se, jogue e evolua no esporte que você ama.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">📷</a>
+                        <a href="#" class="social-link">👥</a>
+                        <a href="#" class="social-link">🐦</a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="footer-column">
+                    <h4 class="footer-title">Links Rápidos</h4>
+                    <ul class="footer-links">
+                        <li><a href="#quadras">Encontrar Quadras</a></li>
+                        <li><a href="#campeonatos">Campeonatos</a></li>
+                        <li><a href="#reservas">Minhas Reservas</a></li>
+                        <li><a href="#">Ranking</a></li>
+                        <li><a href="#">Comunidade</a></li>
+                    </ul>
+                </div>
+
+                <!-- Support -->
+                <div class="footer-column">
+                    <h4 class="footer-title">Suporte</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Central de Ajuda</a></li>
+                        <li><a href="#">Fale Conosco</a></li>
+                        <li><a href="#">Termos de Uso</a></li>
+                        <li><a href="#">Política de Privacidade</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div class="footer-column">
+                    <h4 class="footer-title">Contato</h4>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <span class="contact-icon">📍</span>
+                            <span>Rio de Janeiro, RJ<br>Brasil</span>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">📞</span>
+                            <span>+55 (21) 99999-9999</span>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">✉️</span>
+                            <span>contato@beachtenis.com</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p class="copyright">© 2024 BeachTenis. Todos os direitos reservados.</p>
+                <p class="made-with">Feito com ❤️ para os amantes do beach tennis</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Auth Modal -->
+    <div class="modal" id="authModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title" id="modalTitle">Entrar</h2>
+                <button class="modal-close" id="modalClose">✕</button>
+            </div>
+            
+            <form class="auth-form" id="authForm">
+                <div class="form-group" id="nameGroup" style="display: none;">
+                    <label class="form-label">
+                        <span class="label-icon">👤</span>
+                        Nome Completo
+                    </label>
+                    <input type="text" class="form-input" name="name" placeholder="Seu nome completo">
+                </div>
+
+                <div class="form-group" id="phoneGroup" style="display: none;">
+                    <label class="form-label">
+                        <span class="label-icon">📞</span>
+                        Telefone
+                    </label>
+                    <input type="tel" class="form-input" name="phone" placeholder="(11) 99999-9999">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">
+                        <span class="label-icon">✉️</span>
+                        E-mail
+                    </label>
+                    <input type="email" class="form-input" name="email" placeholder="seu@email.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">
+                        <span class="label-icon">🔒</span>
+                        Senha
+                    </label>
+                    <input type="password" class="form-input" name="password" placeholder="Sua senha" required>
+                </div>
+
+                <div class="form-group" id="confirmPasswordGroup" style="display: none;">
+                    <label class="form-label">
+                        <span class="label-icon">🔒</span>
+                        Confirmar Senha
+                    </label>
+                    <input type="password" class="form-input" name="confirmPassword" placeholder="Confirme sua senha">
+                </div>
+
+                <button type="submit" class="btn btn-hero btn-full" id="authSubmit">Entrar</button>
+            </form>
+
+            <div class="auth-switch">
+                <p id="authSwitchText">Não tem uma conta?</p>
+                <button type="button" class="auth-switch-btn" id="authSwitchBtn">Criar conta</button>
+            </div>
+
+            <div class="social-auth">
+                <p class="social-text">Ou continue com</p>
+                <div class="social-buttons">
+                    <button class="btn btn-outline btn-full">
+                        <span class="btn-icon">📱</span>
+                        Google
+                    </button>
+                    <button class="btn btn-outline btn-full">
+                        <span class="btn-icon">👥</span>
+                        Facebook
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

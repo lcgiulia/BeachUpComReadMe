@@ -346,3 +346,40 @@ function setupScrollAnimations() {
 }
 
 window.closeDashboardModal = closeDashboardModal;
+// ============================
+// ATUALIZAÇÃO DE MY TEAMS E STATS
+// ============================
+async function updateMyTeams() {
+    try {
+        const res = await fetch(`${API_BASE}/teams`);
+        const teams = await res.json();
+        const myTeamsEl = document.getElementById('myTeams');
+        const teamsStatNumber = document.querySelector('.stat-card:nth-child(2) .stat-number'); // segundo stat-card = Meus Times
+
+        if (!teams.length) {
+            myTeamsEl.innerHTML = "<p>Nenhum time cadastrado.</p>";
+            if (teamsStatNumber) teamsStatNumber.textContent = "0";
+            return;
+        }
+
+        // Atualiza a contagem no card de estatísticas
+        if (teamsStatNumber) teamsStatNumber.textContent = teams.length;
+
+        myTeamsEl.innerHTML = teams.map(team => `
+            <div class="team-card">
+                <h4>${team.name}</h4>
+                <p>${team.description || "Sem descrição"}</p>
+                <p><b>Nível:</b> ${team.level}</p>
+                <div class="team-actions">
+                    <button class="btn btn-hero" onclick="editTeam('${team.id}')">Editar</button>
+                    <button class="btn btn-danger" onclick="deleteTeam('${team.id}')">Excluir</button>
+                </div>
+            </div>
+        `).join('');
+    } catch (err) {
+        console.error(err);
+        myTeamsEl.innerHTML = "<p>Erro ao carregar times.</p>";
+        const teamsStatNumber = document.querySelector('.stat-card:nth-child(2) .stat-number');
+        if (teamsStatNumber) teamsStatNumber.textContent = "0";
+    }
+}

@@ -985,3 +985,360 @@ body {
 .animate-slide-in-up {
     animation: slideInUp 0.8s ease-out forwards;
 }
+
+/* Dashboard Styles */
+.dashboard-body {
+    padding-top: 80px;
+    background: linear-gradient(135deg, hsl(var(--secondary) / 0.1), hsl(var(--background)));
+}
+
+.dashboard-main {
+    min-height: calc(100vh - 80px);
+}
+
+/* User Menu */
+.user-menu {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.user-name {
+    font-weight: 600;
+    color: hsl(var(--foreground));
+}
+
+/* Welcome Section */
+.welcome-section {
+    padding: 3rem 0;
+}
+
+.welcome-content {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.welcome-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    color: hsl(var(--foreground));
+}
+
+.welcome-subtitle {
+    font-size: 1.125rem;
+    color: hsl(var(--muted-foreground));
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.quick-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.stat-card {
+    background: hsl(var(--card));
+    padding: 1.5rem;
+    border-radius: 1rem;
+    box-shadow: var(--shadow-elegant);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    transition: var(--transition-smooth);
+}
+
+.stat-card:hover {
+    transform: translateY(-2px);
+}
+
+.stat-icon {
+    width: 3rem;
+    height: 3rem;
+    background: var(--gradient-hero);
+    border-radius: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+}
+
+.stat-number {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: hsl(var(--primary));
+}
+
+.stat-label {
+    font-size: 0.875rem;
+    color: hsl(var(--muted-foreground));
+}
+
+/* Actions Section */
+.actions-section {
+    padding: 4rem 0;
+}
+
+.actions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.action-card {
+    background: hsl(var(--card));
+    padding: 2rem;
+    border-radius: 1.5rem;
+    box-shadow: var(--shadow-elegant);
+    transition: var(--transition-smooth);
+    border: 2px solid transparent;
+}
+
+.action-card:hover {
+    transform: translateY(-5px);
+    border-color: hsl(var(--primary) / 0.2);
+    box-shadow: 0 20px 40px -20px rgba(0,0,0,0.15);
+}
+
+.action-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.action-icon {
+    width: 3rem;
+    height: 3rem;
+    background: var(--gradient-hero);
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+}
+
+.action-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: hsl(var(--foreground));
+}
+
+.action-description {
+    color: hsl(var(--muted-foreground));
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.action-features {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+.feature-item {
+    font-size: 0.875rem;
+    color: hsl(var(--muted-foreground));
+}
+
+.action-btn {
+    margin-top: auto;
+}
+
+/* Activity Section */
+.activity-section {
+    padding: 4rem 0;
+    background: hsl(var(--muted) / 0.3);
+}
+
+.activity-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 800px;
+    margin: 2rem auto 0;
+}
+
+.activity-item {
+    background: hsl(var(--card));
+    padding: 1.5rem;
+    border-radius: 1rem;
+    box-shadow: var(--shadow-elegant);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.activity-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    background: var(--gradient-hero);
+    border-radius: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    flex-shrink: 0;
+}
+
+.activity-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: hsl(var(--foreground));
+    margin-bottom: 0.25rem;
+}
+
+.activity-description {
+    font-size: 0.875rem;
+    color: hsl(var(--muted-foreground));
+    margin-bottom: 0.5rem;
+}
+
+.activity-time {
+    font-size: 0.75rem;
+    color: hsl(var(--muted-foreground));
+}
+
+/* Events Section */
+.events-section {
+    padding: 4rem 0;
+}
+
+.events-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.event-card {
+    background: hsl(var(--card));
+    padding: 1.5rem;
+    border-radius: 1rem;
+    box-shadow: var(--shadow-elegant);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    transition: var(--transition-smooth);
+}
+
+.event-card:hover {
+    transform: translateY(-2px);
+}
+
+.event-date {
+    background: var(--gradient-hero);
+    color: white;
+    padding: 1rem;
+    border-radius: 0.75rem;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.event-day {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.event-month {
+    display: block;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+}
+
+.event-content {
+    flex: 1;
+}
+
+.event-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: hsl(var(--foreground));
+    margin-bottom: 0.25rem;
+}
+
+.event-details {
+    font-size: 0.875rem;
+    color: hsl(var(--muted-foreground));
+}
+
+.event-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+}
+
+/* Team list styles for modal */
+.team-list {
+    margin-top: 1rem;
+}
+
+.team-item {
+    background: hsl(var(--muted));
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.team-item h4 {
+    margin: 0 0 0.25rem 0;
+    color: hsl(var(--foreground));
+}
+
+.team-item p {
+    margin: 0;
+    font-size: 0.875rem;
+    color: hsl(var(--muted-foreground));
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .welcome-title {
+        font-size: 2rem;
+    }
+    
+    .quick-stats {
+        grid-template-columns: 1fr;
+    }
+    
+    .actions-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .events-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .user-menu {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .nav-menu.active .user-menu {
+        display: flex;
+    }
+    
+    .event-card {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .activity-item {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .team-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+}

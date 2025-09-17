@@ -203,10 +203,27 @@ function handleAuthSubmit(e) {
         }
     }
     
-    // Simulate auth request
+    // Simulate auth request - Save user data and redirect to dashboard
     console.log('Auth data:', data);
+    
+    // Save user data to localStorage (simulated login)
+    const userData = {
+        name: data.name || 'Usuário',
+        firstName: (data.name || 'Usuário').split(' ')[0],
+        email: data.email,
+        phone: data.phone
+    };
+    
+    localStorage.setItem('currentUser', JSON.stringify(userData));
+    localStorage.setItem('isLoggedIn', 'true');
+    
     alert(authMode === 'login' ? 'Login realizado com sucesso!' : 'Conta criada com sucesso!');
     closeAuthModal();
+    
+    // Redirect to dashboard
+    setTimeout(() => {
+        window.location.href = 'dashboard.html';
+    }, 500);
 }
 
 // Render Functions
